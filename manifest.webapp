@@ -3,7 +3,7 @@
   "description": "My elevator pitch goes here",
   "launch_path": "/index.html",
   "icons": {
-    "128": "/img/icon-128.png"
+    "128": "/manifest_testing/img/icon-128.png"
   },
   "developer": {
     "name": "Your name or organization",
