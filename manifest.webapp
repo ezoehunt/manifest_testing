@@ -1,13 +1,39 @@
 {
-  "name": "My App",
-  "description": "My elevator pitch goes here",
+  "name": "Find My Friends",
+  "description": "Find My Friends gathers information from your phone's addressbook. It then sends you a notification when you are nearby any friends in your addressbook",
   "launch_path": "/manifest_testing/index.html",
   "icons": {
-    "128": "/manifest_testing/img/icon-128.png"
+    "128": "/manifest_testing/img/icon-128.png",
+    "60": "/manifest_testing/img/icon-60.png"
   },
   "developer": {
-    "name": "Your name or organization",
+    "name": "Tiny Kiwi Studio",
     "url": "http://ezoehunt.github.io/manifest_testing/"
   },
-  "default_locale": "en"
+  "default_locale": "en",
+  "version": "2.0",
+  "permissions": {
+    "contacts": {
+      "description": "Required to gather the user's contacts",
+      "access": "read"
+    },
+    "desktop-notification": {
+      "description": "Required to send notifications"
+    }
+  },
+  "fullscreen": "true",
+  "orientation": "['portrait']",
+  "installs_allowed_from": [
+      "https://marketplace.firefox.com",
+      "https://store.google.com"
+    ]
+  },
+  "locales": {
+    "de": {
+      "description": "¡Acción abierta emocionante del desarrollo del Web!",
+      "developer": {
+        "url": "http://de.ezoehunt.github.io/manifest_testing"
+      }
+    }
+  }
 }
