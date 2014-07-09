@@ -1,0 +1,1 @@
+This is the site to use for validating manifests submitted as part of Dehub user testing.
