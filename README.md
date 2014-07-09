@@ -1,0 +1,1 @@
+App structure to use when validating manifests submitted as part of Devhub user testing
