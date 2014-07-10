@@ -17,16 +17,20 @@ note: leave all
 
 ### Validate the App Manifest
 
-1. [Validate the manifest here][1].
+1. [Validate the manifest][1].
 
-2. Click to view the Full Validation Report.
+2. Click to see the full Validation Report.
 
-3. Screenshot the report. 
-
-4. Save the Validation Report with the participant's App Manifest. Use same names on each, so we don't get them mixed up.
+3. Save the Validation Report with the participant's App Manifest file. Use same names on each, so we don't get them mixed up.
 
 
 ### Tests We've Run
-* 07/09/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given <a href="http://brampitoyo.github.io/sample-marketplace-app/find-my-friends.html">these app details</a> and a link to <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest">the instructions on MDN</a>.
+* 07/09/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given [these app details][2] and a link to [the instructions on MDN][3].
+
+
 
 [1]: https://marketplace.firefox.com/developers/validator
+
+[2]: http://brampitoyo.github.io/sample-marketplace-app/find-my-friends.html
+
+[3]: https://developer.mozilla.org/en-US/Apps/Build/Manifest
