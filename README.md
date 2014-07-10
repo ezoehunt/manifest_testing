@@ -2,8 +2,6 @@
 
 Depending on the test's fictional app, you may need to validate the App Manifest as a hosted app or as a packaged app. Instructions below for both.
 
-Note: You don't need to do anything with the app structure or directories. The only file you'll be dealing with is the manifest.webapp 
-
 ### Validate App Manifest for Hosted Fictional App
 
 1. Copy files from the gh-pages branch of this repo.
