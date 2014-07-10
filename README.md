@@ -17,7 +17,7 @@ note: leave all
 
 ### Validate the App Manifest
 
-1. [Validate the manifest][1].
+1. [Validate the manifest][1] as a hosted app. Use this App Manifest url: http://ezoehunt.github.io/manifest_testing/manifest.webapp
 
 2. Click to see the full Validation Report.
 
