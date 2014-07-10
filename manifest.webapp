@@ -15,7 +15,7 @@
   "permissions": {
     "contacts": {
       "description": "Required to gather the user's contacts",
-      "access": "read"
+      "access": "readonly"
     },
     "alarms": {
       "description": "Required to send notifications"
