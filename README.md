@@ -6,7 +6,7 @@ Note: You don't need to do anything with the app structure or directories. The o
 
 1. Clone the gh-pages branch.
 
-2. **Replace** the manifest.webapp in this directory with the participant's manifest.webapp
+2. **Replace** the manifest.webapp with the participant's manifest.webapp
 
 3. In the participant's manifest.webapp, **change**:
 
@@ -19,7 +19,7 @@ Note: You don't need to do anything with the app structure or directories. The o
 
 ### Validate Participant's App Manifest
 
-1. Zip up the index.html, manifest.webapp, and the /img directory. Call it whatever you want.
+1. Zip up the index.html, manifest.webapp, and the /img directory. Call the zip file whatever you want.
 
 2. Upload and [validate the manifest][1] as a packaged app. 
 
