@@ -18,6 +18,9 @@
       "access": "readonly"
     },
     "alarms": {
+      "description": "Required to schedule notifications"
+    },
+    "desktop-notification": {
       "description": "Required to send notifications"
     }
   },
