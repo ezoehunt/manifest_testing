@@ -19,7 +19,7 @@ Note: You don't need to do anything with the app structure or directories. The o
 
 ### Validate Participant's App Manifest
 
-1. Zip up the index.html, manifest.webapp, and the /img directory. Call the zip file whatever you want.
+1. Zip up the index.html, manifest.webapp, and the /img directory. Call the zip file whatever you want. Note: avoid validation warnings by zipping via terminal. Type "zip -r -X foo.zip index.html manifest.webapp images" from inside /manifest_testing
 
 2. Upload and [validate the manifest][1] as a packaged app. 
 

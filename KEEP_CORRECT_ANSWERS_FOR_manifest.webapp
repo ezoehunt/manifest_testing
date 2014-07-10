@@ -11,7 +11,6 @@
     "url": "http://tiny-kiwi.com"
   },
   "default_locale": "en",
-  "version": "2.0",
   "type": "privileged",
   "permissions": {
     "contacts": {
@@ -28,12 +27,6 @@
       "description": "Required to send notifications"
     }
   },
-  "fullscreen": "true",
-  "orientation": ["portrait"],
-  "installs_allowed_from": [
-      "https://marketplace.firefox.com",
-      "https://play.google.com"
-  ],
   "locales": {
     "de": {
       "description": "Finden Meine Freunde sammelt Informationen aus dem Adressbuch des Telefons. Es sendet Ihnen dann eine Benachrichtigung, wenn Sie in der Nähe sind alle Freunde in Ihrem Adressbuch.",
@@ -41,5 +34,12 @@
         "url": "http://de.tiny-kiwi.com"
       }
     }
-  }
+  },
+  "fullscreen": "true",
+  "orientation": ["portrait"],
+  "installs_allowed_from": [
+      "https://marketplace.firefox.com",
+      "https://play.google.com"
+  ],
+  "version": "2.0"
 }
