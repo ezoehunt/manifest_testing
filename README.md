@@ -6,21 +6,21 @@ Depending on the test's fictional app, you may need to validate the App Manifest
 
 1. Copy files from the gh-pages branch of this repo.
 
-2. For each validation, **replace** the manifest.webapp with the participant's manifest.webapp
+2. For each App Manifest you want to validate:
 
-3. In the participant's manifest.webapp, **change**:
+* **replace** the manifest.webapp with the participant's manifest.webapp
 
-* launch_path to "/manifest_testing/index.html"
+* change launch_path to "/manifest_testing/index.html"
 
-* icon paths to "/manifest_testing/img/icon-128.png" and "/manifest_testing/img/icon-60.png"
+* change icon paths to "/manifest_testing/img/icon-128.png" and "/manifest_testing/img/icon-60.png"
 
-* developer url for the German locale to "http://de.ezoehunt.github.io/manifest_testing"
+* change developer url for the German locale to "http://de.ezoehunt.github.io/manifest_testing"
 
-4. [Validate the manifest][1] as a **hosted** app.
+3. [Validate the manifest][1] as a **hosted** app.
 
-5. Click to see the full Validation Report.
+4. Click to see the full Validation Report.
 
-6. Save the Validation Report with the participant's App Manifest file. Use same names on each, so we don't get them mixed up.
+5. Save the Validation Report with the participant's App Manifest file. Use same names on each, so we don't get them mixed up.
 
 
 ### Validate App Manifest for Packaged Fictional App
