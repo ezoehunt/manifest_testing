@@ -1,6 +1,6 @@
 ## Validating App Manifests from Testing Participants 
 
-### Use this app structure to test App Manifests created for user testing.
+### Prepare App Manifest for Validation.
 
 To validate a participant's App Manifest:
 
