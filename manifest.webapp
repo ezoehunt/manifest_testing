@@ -17,9 +17,8 @@
       "description": "Required to gather the user's contacts",
       "access": "read"
     },
-    "desktop-notification": {
-      "description": "Required to send notifications",
-      "access": "none"
+    "alarms": {
+      "description": "Required to send notifications"
     }
   },
   "fullscreen": "true",
