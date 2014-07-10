@@ -15,6 +15,7 @@ Depending on the test's fictional app, you may need to validate the App Manifest
 - change icon paths to "/manifest_testing/img/icon-128.png" and "/manifest_testing/img/icon-60.png"
 
 - change developer url for the German locale to "http://de.ezoehunt.github.io/manifest_testing"
+
 3. [Validate the manifest][1] as a **hosted** app.
 
 4. Click to see the full Validation Report.
