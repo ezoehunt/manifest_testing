@@ -4,9 +4,9 @@ note: leave all
 
 ### Prepare a Participant's App Manifest:
 
-1. *Replace* the manifest.webapp in this directory with the participant's manifest.webapp
+1. **Replace** the manifest.webapp in this directory with the participant's manifest.webapp
 
-2. In the participant's manifest.webapp, *change*:
+2. In the participant's manifest.webapp, **change**:
 
 * launch_path to "/manifest_testing/index.html"
 
@@ -17,7 +17,7 @@ note: leave all
 
 ### Validate the App Manifest
 
-1. Validate the manifest here.
+1. [Validate the manifest here][1].
 
 2. Click to view the Full Validation Report.
 
@@ -29,4 +29,4 @@ note: leave all
 ### Tests We've Run
 * 07/09/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given <a href="http://brampitoyo.github.io/sample-marketplace-app/find-my-friends.html">these app details</a> and a link to <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest">the instructions on MDN</a>.
 
-</html>
+[1]: https://marketplace.firefox.com/developers/validator
