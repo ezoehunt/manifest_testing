@@ -3,8 +3,8 @@
   "description": "Find My Friends gathers information from your phone's addressbook. It then sends you a notification when you are nearby any friends in your addressbook.",
   "launch_path": "/index.html",
   "icons": {
-    "128": "/img/icon-128.png",
-    "60": "/img/icon-60.png"
+    "128": "/images/icon-128.png",
+    "60": "/images/icon-60.png"
   },
   "developer": {
     "name": "Tiny Kiwi Studio",
@@ -17,6 +17,9 @@
     "contacts": {
       "description": "Required to view the user's contacts",
       "access": "readonly"
+    },,
+    "geo-location": {
+      "description": "Required to know where the user is"
     },
     "alarms": {
       "description": "Required to schedule notifications"
