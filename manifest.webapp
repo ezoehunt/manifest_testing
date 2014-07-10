@@ -19,7 +19,7 @@
     },
     "desktop-notification": {
       "description": "Required to send notifications",
-      "access": "read"
+      "access": "none"
     }
   },
   "fullscreen": "true",
