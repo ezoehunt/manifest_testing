@@ -17,7 +17,7 @@ note: leave all
 
 ### Validate the App Manifest
 
-1. [Validate the manifest][1] as a hosted app. Use this App Manifest url<br/>: http://ezoehunt.github.io/manifest_testing/manifest.webapp
+1. [Validate the manifest][1] as a hosted app. Use this App Manifest url:<br/>http://ezoehunt.github.io/manifest_testing/manifest.webapp
 
 2. Click to see the full Validation Report.
 
@@ -25,7 +25,7 @@ note: leave all
 
 
 ### Tests We've Run
-* 07/09/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given [these app details][2] and a link to [the instructions on MDN][3].
+* 07/09/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given [these app details][2] and a link to [the current instructions on MDN][3].
 
 
 
