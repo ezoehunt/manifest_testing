@@ -1,6 +1,6 @@
 ## Validating App Manifests from Testing Participants 
 
-note: leave all 
+Note: You don't need to do anything with the app structure or directories. The only file you'll be dealing with is the manifest.webapp 
 
 ### Prepare a Participant's App Manifest:
 
