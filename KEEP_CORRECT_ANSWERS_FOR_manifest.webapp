@@ -16,8 +16,8 @@
     "contacts": {
       "description": "Required to view the user's contacts",
       "access": "readonly"
-    },,
-    "geo-location": {
+    },
+    "geolocation": {
       "description": "Required to know where the user is"
     },
     "alarms": {
