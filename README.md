@@ -4,9 +4,11 @@ Note: You don't need to do anything with the app structure or directories. The o
 
 ### Prepare Participant's App Manifest:
 
-1. **Replace** the manifest.webapp in this directory with the participant's manifest.webapp
+1. Clone the gh-pages branch.
 
-2. In the participant's manifest.webapp, **change**:
+2. **Replace** the manifest.webapp in this directory with the participant's manifest.webapp
+
+3. In the participant's manifest.webapp, **change**:
 
 * launch_path to "/manifest_testing/index.html"
 
@@ -17,7 +19,9 @@ Note: You don't need to do anything with the app structure or directories. The o
 
 ### Validate Participant's App Manifest
 
-1. [Validate the manifest][1] as a hosted app. Use this App Manifest url:<br/>http://ezoehunt.github.io/manifest_testing/manifest.webapp
+1. Zip up the index.html, manifest.webapp, and the /img directory. Call it whatever you want.
+
+2. Upload and [validate the manifest][1] as a packaged app. 
 
 2. Click to see the full Validation Report.
 
