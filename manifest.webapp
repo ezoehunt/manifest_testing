@@ -18,11 +18,12 @@
       "access": "read"
     },
     "desktop-notification": {
-      "description": "Required to send notifications"
+      "description": "Required to send notifications",
+      "access": "read"
     }
   },
   "fullscreen": "true",
-  "orientation": "['portrait']",
+  "orientation": "["portrait"]",
   "installs_allowed_from": [
       "https://marketplace.firefox.com",
       "https://store.google.com"
