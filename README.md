@@ -8,14 +8,13 @@ Depending on the test's fictional app, you may need to validate the App Manifest
 
 2. For each App Manifest you want to validate:
 
-* **replace** the manifest.webapp with the participant's manifest.webapp
+- **replace** the manifest.webapp with the participant's manifest.webapp
 
-* change launch_path to "/manifest_testing/index.html"
+- change launch_path to "/manifest_testing/index.html"
 
-* change icon paths to "/manifest_testing/img/icon-128.png" and "/manifest_testing/img/icon-60.png"
+- change icon paths to "/manifest_testing/img/icon-128.png" and "/manifest_testing/img/icon-60.png"
 
-* change developer url for the German locale to "http://de.ezoehunt.github.io/manifest_testing"
-
+- change developer url for the German locale to "http://de.ezoehunt.github.io/manifest_testing"
 3. [Validate the manifest][1] as a **hosted** app.
 
 4. Click to see the full Validation Report.
