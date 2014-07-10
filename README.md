@@ -4,9 +4,9 @@ Depending on the test's fictional app, you may need to validate the App Manifest
 
 ### Validate App Manifest for Hosted Fictional App
 
-1. Copy files from the gh-pages branch of this repo.
+Copy files from the gh-pages branch of this repo.
 
-2. For each App Manifest you want to validate:
+For each App Manifest you want to validate:
 
 - **replace** the manifest.webapp with the participant's manifest.webapp
 
@@ -16,24 +16,24 @@ Depending on the test's fictional app, you may need to validate the App Manifest
 
 - change developer url for the German locale to "http://de.ezoehunt.github.io/manifest_testing"
 
-3. [Validate the manifest][1] as a **hosted** app.
+[Validate the manifest][1] as a **hosted** app.
 
-4. Click to see the full Validation Report.
+Click to see the full Validation Report.
 
-5. Save the Validation Report with the participant's App Manifest file. Use same names on each, so we don't get them mixed up.
+Save the Validation Report with the participant's App Manifest file. Use same names on each, so we don't get them mixed up.
 
 
 ### Validate App Manifest for Packaged Fictional App
 
-1. Copy the files from the gh-pages branch of this repo.
+Copy the files from the gh-pages branch of this repo.
 
-2. Zip up the index.html, manifest.webapp, and the /images directory. Avoid validation warnings by zipping via command line. From inside /manifest_testing, type<br/>"zip -r -X foo.zip index.html manifest.webapp images"
+Zip up the index.html, manifest.webapp, and the /images directory. Avoid validation warnings by zipping via command line. From inside /manifest_testing, type<br/>"zip -r -X foo.zip index.html manifest.webapp images"
 
-2. Upload and [validate the manifest][1] foo.zip as a **packaged** app. 
+Upload and [validate the manifest][1] foo.zip as a **packaged** app. 
 
-2. Click to see the full Validation Report.
+Click to see the full Validation Report.
 
-3. Save the Validation Report with the participant's App Manifest file. Use same names on each, so we don't get them mixed up.
+Save the Validation Report with the participant's App Manifest file. Use same names on each, so we don't get them mixed up.
 
 
 ### Tests We've Run
