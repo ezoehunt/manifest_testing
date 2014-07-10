@@ -2,7 +2,7 @@
 
 Note: You don't need to do anything with the app structure or directories. The only file you'll be dealing with is the manifest.webapp 
 
-### Prepare a Participant's App Manifest:
+### Prepare Participant's App Manifest:
 
 1. **Replace** the manifest.webapp in this directory with the participant's manifest.webapp
 
@@ -15,7 +15,7 @@ Note: You don't need to do anything with the app structure or directories. The o
 * developer url for the German locale to "http://de.ezoehunt.github.io/manifest_testing"
 
 
-### Validate the App Manifest
+### Validate Participant's App Manifest
 
 1. [Validate the manifest][1] as a hosted app. Use this App Manifest url:<br/>http://ezoehunt.github.io/manifest_testing/manifest.webapp
 
