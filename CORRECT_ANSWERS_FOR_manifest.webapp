@@ -1,6 +1,6 @@
 {
   "name": "Find My Friends",
-  "description": "Find My Friends gathers information from your phone's addressbook. It then sends you a notification when you are nearby any friends in your addressbook.",
+  "description": "Find My Friends gathers information from your phone's address book. It then sends you a notification when you are nearby any friends in your addressbook.",
   "launch_path": "/index.html",
   "icons": {
     "128": "/images/icon-128.png",
@@ -29,14 +29,11 @@
   },
   "locales": {
     "de": {
-      "description": "Finden Meine Freunde sammelt Informationen aus dem Adressbuch des Telefons. Es sendet Ihnen dann eine Benachrichtigung, wenn Sie in der Nähe sind alle Freunde in Ihrem Adressbuch.",
-      "developer": {
-        "url": "http://de.tiny-kiwi.com"
-      }
+      "description": "Finden Meine Freunde sammelt Informationen aus dem Adressbuch des Telefons. Es sendet Ihnen dann eine Benachrichtigung, wenn Sie in der Nähe sind alle Freunde in Ihrem Adressbuch."
     }
   },
   "fullscreen": "true",
-  "orientation": ["portrait"],
+  "orientation": ["portrait-primary"],
   "installs_allowed_from": [
       "https://marketplace.firefox.com",
       "https://play.google.com"
