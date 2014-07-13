@@ -37,7 +37,9 @@ Save the Validation Report with the participant's App Manifest file. Use same na
 
 
 ### Tests We've Run
-* 07/09/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given [these app details][2] and a link to [the current instructions on MDN][3].
+* 07/09/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given [these app details][2] and a link to [the current instructions on MDN][3]. This test was run twice.
+
+* 07/13/14 - Users were asked to create an App Manifest for a fictional app. To create the App Manifest, they were given [these app details][4] and a link to [the current instructions on MDN][3]. 
 
 
 
@@ -46,3 +48,5 @@ Save the Validation Report with the participant's App Manifest file. Use same na
 [2]: http://brampitoyo.github.io/sample-marketplace-app/find-my-friends.html
 
 [3]: https://developer.mozilla.org/en-US/Apps/Build/Manifest
+
+[4]: http://ezoehunt.github.io/manifest_testing/instructions.html
