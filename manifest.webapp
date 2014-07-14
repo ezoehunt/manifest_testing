@@ -1,3 +1,32 @@
 {
-  "manifest": "replacd this file with the participant's manifest.webapp"
+  "name": "Find My Friends",
+  "description": "Find My Friends gathers information from your phone's address book. It then sends you a notification when you are nearby any friends in your address book.",
+  "launch_path": "/manifest_testing/index.html",
+  "icons": {
+    "60": "manifest_testing/images/icon-60.png",
+	"128": "manifest_testing/images/icon-128.png"
+  },
+  "developer": {
+    "name": "Tiny Kiwi Studio",
+    "url": "http://www.tiny-kiwi.com"
+  },
+  "default_locale": "en",
+  "type": "privileged",
+  "version": "2.0.0",
+  "orientation": ["portrait"],
+  "fullscreen": "true",
+  "locales": {
+  "en": {
+    "description": "Find My Friends gathers information from your phone's address book. It then sends you a notification when you are nearby any friends in your address book.",
+    "developer": {
+      "url": "http://www.tiny-kiwi.com"
+    }
+  },
+  "de": {
+    "description": "Finden Meine Freunde sammelt Informationen aus Ihrem Handy-Adressbuch. Es sendet Ihnen dann eine Benachrichtigung, wenn Sie in der Nähe sind alle Freunde in Ihrem Adressbuch.",
+    "developer": {
+      "url": "http://de.ezoehunt.github.io/manifest_testing"
+    }
+  }
+}
 }
