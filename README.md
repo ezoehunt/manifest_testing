@@ -1,5 +1,5 @@
 ## HTML Files
-* [Manifest Instructions - 07/16/14][5]
+* [Updated MDN Manifest Instructions - 07/16/14][5]
 
 
 ## Validating App Manifests from Testing Participants 
@@ -55,4 +55,4 @@ Save the Validation Report with the participant's App Manifest file. Use same na
 
 [4]: http://ezoehunt.github.io/manifest_testing/instructions.html
 
-[5]: http://ezoehunt.github.io/manifest_testing/instructions_071614.html
+[5]: http://ezoehunt.github.io/manifest_testing/mdn_instructions.html
