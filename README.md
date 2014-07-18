@@ -1,3 +1,7 @@
+## HTML Files
+* [Manifest Instructions - 07/16/14][5]
+
+
 ## Validating App Manifests from Testing Participants 
 
 Depending on the test's fictional app, you may need to validate the App Manifest as a hosted app or as a packaged app. Instructions below for both.
@@ -50,3 +54,5 @@ Save the Validation Report with the participant's App Manifest file. Use same na
 [3]: https://developer.mozilla.org/en-US/Apps/Build/Manifest
 
 [4]: http://ezoehunt.github.io/manifest_testing/instructions.html
+
+[5]: http://ezoehunt.github.io/manifest_testing/instructions_071614.html

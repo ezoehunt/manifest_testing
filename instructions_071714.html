@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>App Manifest Instructions - Test 5</title>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="manifest.css">
+</head>
+
+	<body>
+
+    <div class="container" style="max-width:650px;margin-top:10px;margin-bottom:30px;">
+      <div class="header">
+        <h1 class="text-muted">App Manifest Instructions</h3>
+      </div>
+
+      <div class="row" style="">
+
+        <div class="col-lg-10" style="">
+          <h2>What is an App Manifest?</h2>
+          <p>The App Manifest provides information about an app (such as name, author, icon, and description) in a simple document usable by both users and app stores. Most importantly, it contains a list of Web APIs that your app needs. This allows users to make informed decisions about apps before installing them.</p>
+
+          <p>If you are planning to publish your app on the Firefox Marketplace, you also need to have a Marketplace Config file.</p>
+
+          <p><a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps/App_manifest_FAQ">Learn more about the App Manifest ></a></p>
+
+          <h2>Creating an App Manifest</h3>
+          <h4>Conventions:</b> File Name, Location, and Format</h4>
+          <ul>
+            <li>Name: manifest.webapp (must use the .webapp extension)</li>
+            <li>Location: your app's root directory</li>
+            <li>Format: JSON (must be valid JSON)</li>
+          </ul>
+
+          
+          <br/>
+          <h4>Path Handling</h4>
+          <p>Internal paths must be absolute from the app's origin, for example, <code>/images/myicon.png</code> or <code>/index.html</code>.</p>
+
+          <p>Internal paths also must be served from the same origin as the app.</p>
+
+          <p>External paths must be fully qualified. For example, if you have a Packaged App but host icons on your own server, the icons path would be http://mywebapp/images/myicon.png.</p>
+
+          
+          <br/>
+          <h4>Requirements for Submitting to the Firefox Marketplace</h4>
+
+          <p>If you want to publish your app to the Firefox Marketplace, your App Manifest must contain the required fields below. </p>
+          <ul>
+            <li><code>name</code></li>
+            <li><code>description</code></li>
+            <li><code>launch_path</code> for Packaged Apps</li>
+            <li><code>icons</code> 1 icon of 128x128 required</li>
+            <li><code>developer</code> </li>
+            <li><code>default_locale</code> if <code>locales</code> is defined</li>
+            <li><code>type</code></code> for Privileged and Certified Apps</li>
+          </ul>
+
+
+          <br/>
+          <h4>Requirements for Generic Open Web Apps</h4>
+
+          <p>If you're building a generic open web app that will not be published in the Firefox Marketplace, your App Manifest must contain the required fields below.</p>
+          <ul>
+            <li><code>name</code></li>
+            <li><code>description</code></li>
+            <li><code>icons</code> 1 icon of 128x128 required</li>
+          </ul>
+
+
+          <br/>
+          <h4>Sample App Manifest</h4>
+
+          <p><a href="">Download a sample App Manifest containing all fields.</a></p>
+
+          <p>Be sure to delete fields and values you do not need. For example, if your app is a Hosted App, delete fields that apply only to Packaged Apps.</p>
+
+
+          <br/>
+          <h4>App Manifest Validation</h4>
+          
+          <p>If you're submitting to the Firefox Marketplace, your App Manifest must pass Marketplace Validation. </p>
+
+          <p>Try our <a href="https://marketplace.firefox.com/developers/validator">Manifest Validator</a>, which will help you identify any errors. Or <a href="http://firefox-marketplace-api.readthedocs.org/en/latest/">you can use this API</a> to validate your App Manifest.</p>
+
+
+          <h2>Required App Manifest Fields</h2>
+
+          <p><code>name</code></p>
+          <p class="red">Required for all App Manifests.</p>
+          
+          <p>A human-readable name for the app. Maximum length is 128 characters.</p>
+
+          <p>Note: If you change the name of your app after distribution, the name will not be updated for any existing installations.</p>
+
+          <pre>"name": "The Open Web!"</pre>
+
+
+
+
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
