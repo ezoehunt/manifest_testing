@@ -169,7 +169,7 @@
             <li><code>certified</code>: An authenticated app that is intended for critical system functions like the default dialer or the system settings app on a smartphone. It is not intended for 3rd party apps in an app store. This type of app has the highest level of access to WebAPIs.</li>
           </ul>
 
-          <p>For more information on app types, see <a href="https://developer.mozilla.org/en-US/Marketplace/Options/Packaged_apps">Packaged apps</a>. For information on access to WebAPIs, see the <a href="https://developer.mozilla.org/en-US/Apps/Build/Manifest#permissions">permissions field</a>.</p>
+          <p>For more information on app types, see <a href="https://developer.mozilla.org/en-US/Marketplace/Options/Packaged_apps">Packaged apps</a>. For information on access to WebAPIs, see the <a href="#permissions">permissions field</a>.</p>
           
           <pre>"type": "web"</pre>
           
@@ -346,7 +346,7 @@
       
       <pre>"origin": "app://mywebapp.com"</pre>
       
-      <h3><code>permissions</code></h3>
+      <a name="permissions"></a><h3><code>permissions</code></h3>
       <p class="red">Applies only to Packaged Apps.</p>
       
       <p>The user permissions for sensitive device APIs that your app needs, for example, access to the user's Contacts. <a href="https://developer.mozilla.org/en-US/Apps/Build/App_permissions">See a full list of  WebAPI permissions/features</a>.</p>
