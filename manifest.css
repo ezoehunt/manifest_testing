@@ -1,4 +1,12 @@
-
 .red {
   color: red;
+}
+h2 {
+  margin-top: 1.5em;
+}
+h3 {
+  margin-top: 2em;
+}
+h3 code {
+  color: black;
 }

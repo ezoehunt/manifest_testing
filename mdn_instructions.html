@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<title>App Manifest Instructions - Test 5</title>
+	<title>App Manifest Instructions - Test 4</title>
 
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="manifest.css">
 </head>
 
 	<body>
 
-    <div class="container" style="max-width:650px;margin-top:10px;margin-bottom:30px;">
+    <div class="container" style="max-width:650px;margin-top:30px;margin-bottom:30px;">
       <div class="header">
         <h1 class="text-muted">App Manifest Instructions</h3>
       </div>
 
-      <div class="row" style="">
+      <div class="row">
 
-        <div class="col-lg-10" style="">
+        <div class="col-lg-10">
           <h2>What is an App Manifest?</h2>
           <p>The App Manifest provides information about an app (such as name, author, icon, and description) in a simple document usable by both users and app stores. Most importantly, it contains a list of Web APIs that your app needs. This allows users to make informed decisions about apps before installing them.</p>
 
@@ -24,26 +24,25 @@
 
           <p><a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps/App_manifest_FAQ">Learn more about the App Manifest ></a></p>
 
-          <h2>Creating an App Manifest</h3>
-          <h4>Conventions:</b> File Name, Location, and Format</h4>
+          <h2>Creating an App Manifest</h2>
+          
+          <h3>Conventions: File Name, Location, and Format</h3>
+          
           <ul>
             <li>Name: manifest.webapp (must use the .webapp extension)</li>
             <li>Location: your app's root directory</li>
             <li>Format: JSON (must be valid JSON)</li>
           </ul>
 
+          <h3>Path Handling</h3>
           
-          <br/>
-          <h4>Path Handling</h4>
           <p>Internal paths must be absolute from the app's origin, for example, <code>/images/myicon.png</code> or <code>/index.html</code>.</p>
 
           <p>Internal paths also must be served from the same origin as the app.</p>
 
           <p>External paths must be fully qualified. For example, if you have a Packaged App but host icons on your own server, the icons path would be http://mywebapp/images/myicon.png.</p>
 
-          
-          <br/>
-          <h4>Requirements for Submitting to the Firefox Marketplace</h4>
+          <h3>Requirements for Submitting to the Firefox Marketplace</h3>
 
           <p>If you want to publish your app to the Firefox Marketplace, your App Manifest must contain the required fields below. </p>
           <ul>
@@ -56,28 +55,17 @@
             <li><code>type</code></code> for Privileged and Certified Apps</li>
           </ul>
 
-
-          <br/>
-          <h4>Requirements for Generic Open Web Apps</h4>
+          <h3>Requirements for Generic Open Web Apps</h3>
 
           <p>If you're building a generic open web app that will not be published in the Firefox Marketplace, your App Manifest must contain the required fields below.</p>
+          
           <ul>
             <li><code>name</code></li>
             <li><code>description</code></li>
             <li><code>icons</code> 1 icon of 128x128 required</li>
           </ul>
 
-
-          <br/>
-          <h4>Sample App Manifest</h4>
-
-          <p><a href="">Download a sample App Manifest containing all fields.</a></p>
-
-          <p>Be sure to delete fields and values you do not need. For example, if your app is a Hosted App, delete fields that apply only to Packaged Apps.</p>
-
-
-          <br/>
-          <h4>App Manifest Validation</h4>
+          <h3>App Manifest Validation</h3>
           
           <p>If you're submitting to the Firefox Marketplace, your App Manifest must pass Marketplace Validation. </p>
 
@@ -86,19 +74,330 @@
 
           <h2>Required App Manifest Fields</h2>
 
-          <p><code>name</code></p>
-          <p class="red">Required for all App Manifests.</p>
+          <h3><code>name</code></h3>
+          <p class="red">Required for all App Manifests</p>
           
           <p>A human-readable name for the app. Maximum length is 128 characters.</p>
 
           <p>Note: If you change the name of your app after distribution, the name will not be updated for any existing installations.</p>
 
           <pre>"name": "The Open Web!"</pre>
-
-
-
-
           
+          <h3><code>description</code></h3>
+          <p class="red">Required for all App Manifests</p>
+          
+          <p>A human-readable description for the app. Maximum length is 1024 characters.</p>
+          
+          <pre>"description": "Exciting Open Web App application!"</pre>
+          
+          <h3><code>launch_path</code></h3>
+          <p class="red">If app is a <a>Packaged App</a>, required for App Manifest.</p>
+          
+          <p>The path within the app's origin that is loaded when the app starts.</p>
+
+          <p>Specifies the starting point of the content local to the zip file containing the packaged app. For example, if the launch_path is <code>/myApp/index.html</code>, the app will open the file at <code>/myApp/index.html</code> when the app is launched.</p>
+
+          <div class="alert alert-warning" role="alert"><strong>Caution:</strong> the launch_path value should always be a relative path from the app’s origin. Even if your <code>index.html</code> file is located at the origin/root, the value should be <code>/index.html</code>, not just <code>index.html</code>.</div>
+
+          <p><strong>Tips:</strong></p>
+          <ul>
+            <li>If your app is stored in the root of a Web server, for example <code>mywebapp.github.com/</code>, then <code>launch_path</code> must be set to <code>/</code>.</li>
+            <li>If your app is stored in a subdirectory, for example <code>mymarket.github.com/mywebapp/</code>, then <code>launch_path</code> must be set to <code>/mywebapp/</code>.</li>
+          </ul>
+
+          <pre>"launch_path": "/index.html"</pre>
+          
+          <h3><code>icons</code></h3>
+          
+          <p class="red">1 icon (sized 128x128) required for all App Manifests.</p>
+
+          <p>A map of icon sizes to URIs of the icons.<p>
+
+          <p>Remember that internal paths to icons must be absolute from the app’s origin, while paths to externally hosted icons must be fully qualified.</p>
+          
+          <p>Icons must be square. Icons should not have solid backgrounds that extend to all four corners of the icon.</p>
+          
+          <div class="alert alert-warning" role="alert"><strong>Caution:</strong> if you’re submitting to the Firefox Marketplace, your icons must also follow the Firefox Marketplace app icon guidelines.</div>
+          
+          <p><strong>Icon Sizes:</strong></p>
+          <ul>
+            <li><strong>128 x 128:</strong> Used for display on the Firefox Marketplace. <span class="red">Required for all App Manifests</span></li>
+            <li><strong>60 x 60:</strong> Used as the app’s icon on the device. Optional, but recommended.</li>
+            <li><strong>32 x 32, 90 x 90, 120 x 120, and 256 x 256:</strong> Optional, needed for optimal display on other platforms your app might be installed on, for example, Windows 7 or Android.</li>
+          </ul>
+          
+<pre>"icons": {
+  128: "/img/icon-1.png",
+  60: "/img/icon47.jpg"
+}</pre>
+
+          <h3><code>developer</code></h3>
+          
+          <ul>
+            <li><code>name</code>: The name of the developer. <span class="red">Required for all App Manifests</span></li>
+            <li><code>url</code>: The URL of a website containing information about the app's developer. Optional.</li>
+          </ul>
+
+<pre>"developer": {
+    "name": "The Open Web!",
+    "url": "http://www.mywebapp.com"
+}</pre>
+
+          <h3><code>default_locale</code></h3>
+          <p class="red"><strong>If locales is defined</strong>, <code>default_locale</code> is required for App Manifest.</p>
+          
+          <p>A language tag (<a href="http://www.ietf.org/rfc/rfc4646.txt">RFC 4646</a>) that defines the language you used in the field values of your App Manifest.</p>
+          
+          <p>Although <code>default_locale</code> is not required for apps that don’t have locales, it is recommended that you include it. If you do not define a <code>default_locale</code>, the Firefox Marketplace has to guess your app’s language.</p>
+          
+          <div class="alert alert-warning" role="alert"><strong>Caution:</strong> Do not define the value of <code>default_locale</code> again in locales.</div>
+          
+          <p>For example, if your app uses English, it’s <code>default_locale</code> would be:</p>
+
+          <pre>"default_locale": "en"</pre>
+          
+          <h3><code>type</code></h3>
+          <p class="red"><strong>If App is Privileged or Certified</strong>, type is required for App Manifest.</p>
+          
+          <p>The app's type, which can be <code>web</code>, <code>privileged</code>, or <code>certified</code>.</p>
+          
+          <p>App types have different levels of access to sensitive device APIs. If you do not define type, it will default to <code>web</code> as the type.</p>
+          
+          <ul>
+            <li><code>web</code>: A regular hosted app. This type has the least access to WebAPIs.</li>
+            <li><code>privileged</code>: An authenticated app that has been approved by an app store such as the Firefox Marketplace. This type has greater access to WebAPIs than a web app.</li>
+            <li><code>certified</code>: An authenticated app that is intended for critical system functions like the default dialer or the system settings app on a smartphone. It is not intended for 3rd party apps in an app store. This type of app has the highest level of access to WebAPIs.</li>
+          </ul>
+
+          <p>For more information on app types, see <a>Packaged apps</a>. For information on access to WebAPIs, see the <a>permissions field</a>.</p>
+          
+          <pre>"type": "certified"</pre>
+          
+          <h2>Optional App Manifest Fields</h2>
+          
+          <h3><code>activities</code></h3>
+          
+          <p>A set of Web Activities that this app supports (<a>full list</a>). It’s structured like so:</p>
+          
+          <ul>
+            <li>Each property in this field is an activity</li>
+            <li>Activity names are free-form text</li>
+            <li>Each activity is represented by an object</li>
+          </ul>
+          
+          <p>For example, here’s a field with one activity named <code>share</code>.</p>
+
+<pre>"activities": {
+  "share": {
+    "filters": {
+      "type": [ "image/png", "image/gif" ]
+    },
+    "href": "foo.html",
+    "disposition": "window",
+    "returnValue": true
+  }
+}</pre>
+
+          <h3><code>appcache_path</code></h3>
+          
+          <p>The path to your <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache#The_cache_manifest_file">application cache manifest file</a>. Using an application cache provides speed, offline browsing capability, and reduced server load.</p>
+          
+          <pre>"appcache_path": "/cache.manifest"</pre>
+          
+          Although it is optional, defining <code>appcache_path</code> is recommended.
+
+          <h3><code>chrome</code></h3>
+          
+          <p>A set of navigation controls on the bottom of the screen that consists of of Back, Forward, Reload and Favorite.</p>
+          
+          <p><img src="https://mdn.mozillademos.org/files/5843/nav-both2.png" width="630"></p>
+          
+          <pre>"chrome": { "navigation": true }</pre>
+          
+          <p>We recommend designing a back button to your app interface, instead of relying on this option.</p>
+          
+          <h3><code>csp</code></h3>
+
+          <p>A Content Security Policy (CSP) that is applied to all pages in the app. See the <a href="https://developer.mozilla.org/en-US/Apps/CSP">Apps CSP page</a> for how to use this field.</p>
+
+          <h3><code>fullscreen</code></h3>
+          
+          <p>A control that tells the runtime whether or not to launch the app in full-screen mode. Since most apps run in fullscreen, we recommend setting this to <code>true</code>.</p>
+          
+          <pre>"fullscreen": "true"</pre>
+          
+          <h3><code>installs_allowed_from</code></h3>
+          
+          <p>One (or more) URLs to the domains where your app can be installed from.</p>
+          
+          <p>This field is intended for apps that end-users can purchase. The field identifies the app stores with whom you have a commercial relationship. If left empty, your app can be installed anywhere.</p>
+          
+          </p>For example, if your app can be installed from Firefox Marketplace and Google Play Store, <code>installs_allowed_from</code> will look like this:</p>
+
+<pre>"installs_allowed_from": [
+  "https://marketplace.firefox.com",
+  "https://play.google.com"
+]</pre>
+
+          <div class="alert alert-warning" role="alert"><strong>Caution:</strong> Do not put a trailing slash at the end of URLs, because the installation will fail. For example, <code>https://marketplace.example.com/</code> is incorrect.</div>
+          
+          <h3><code>locales</code></h3>
+
+          <p>A map of one or more language-specific overrides of the field values in your App Manifest.</p>
+          
+          <p><strong>Remember:</strong> If locales is defined, default_locale also must be defined.</p>
+          
+          <div class="alert alert-warning" role="alert"><strong>Caution:</strong> You cannot override these fields: <code>default_locale</code>, <code>locales</code>, and <code>installs_allowed_from</code>.</div>
+          
+          <p>Each <code>locales</code> entry contains a list of the App Manifest fields you want to override for a specific language. For example, your apps’ default language is English, so its <code>default_locale</code> would be <code>en</code>. But you want to override the name and description for your Italian and German users with translated name and description. So your locales entries would look like this:
+
+<pre>
+"locales": {
+  "it": {
+    "name": "L'Open Web",
+    "description": "Eccitante azione di sviluppo web open!"
+  },
+  "de": {
+    "name": "Der Open Web",
+    "description": "Spannende offene Web-Entwicklung-Action!"
+  }
+}</pre>
+
+        <p><strong>Tip:</strong> Keys for <code>locales</code> use the same language tags as for <code>default_locale</code> (<a href="http://www.ietf.org/rfc/rfc4646.txt">RFC 4646</a>). They should be in the format of <code>xx-YY</code> or <code>xx</code>. For example, you should prefer the format <code>pt-BR</code> and <code>es</code> over alternatives like <code class="text-muted">pt_br</code>, <code class="text-muted">pt_BR</code>, or <code class="text-muted">ES</code>.</p>
+        
+        <h3><code>messages</code></h3>
+        <p class="red">Applies only to apps using Firefox OS.</p>
+        
+        <p>The system messages that you are allowing the app to capture, and the pages in your app that will display when those messages occur.</p>
+        
+        <p>Below is an example from the Firefox OS Dialer app. Every time an incoming call comes in (system message: <code>telephony-new-call</code>), the device shows the dialer’s keypad (URL: <code>/dialer/index.html#keyboard-view</code>).</p>
+        
+<pre>"messages": [
+  { "telephony-new-call": "/dialer/index.html#keyboard-view" }
+]</pre>
+
+       <h3><code>orientation</code></h3>
+       
+       <p class="red">Applies only to apps using Android or Firefox OS.</p>
+       
+       <p>The positioning at which the application will stay locked.</p>
+       
+       <pre>"orientation": [ "portrait-primary", "landscape" ]</pre>
+       
+       <p>Possible values:</p>
+       
+       <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th><code>orientation</code> value</th>
+            <th>App will stay locked to</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>portrait-primary</code></td>
+            <td><img src="images/firefox-os-device-small.png"></td>
+          </tr>
+          <tr>
+            <td><code>portrait-secondary</code></td>
+            <td><img src="images/firefox-os-device-small.png" style="-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);"></td>
+          </tr>
+          <tr>
+            <td><code>portrait</code><br />
+            If you declare this, there’s no need to write<br />
+            <code>-primary</code> or <code>-secondary</code>
+            </td>
+            <td><img src="images/firefox-os-device-small.png"> &nbsp; <img src="images/firefox-os-device-small.png" style="-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);"></td>
+          </tr>
+            <td><code>landscape-primary</code></td>
+            <td> &nbsp; &nbsp; &nbsp; <img src="images/firefox-os-device-small.png" style="-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-o-transform:rotate(90deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);"></td>
+          </tr>
+          <tr>
+            <td><code>portrait-secondary</code></td>
+            <td> &nbsp; &nbsp; &nbsp; <img src="images/firefox-os-device-small.png" style="-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg);-o-transform:rotate(270deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);"></td>
+          </tr>
+          <tr>
+            <td><code>landscape</code><br />
+            If you declare this, there’s no need to write<br />
+            <code>-primary</code> or <code>-secondary</code>
+            </td>
+            <td> &nbsp; &nbsp; &nbsp; <img src="images/firefox-os-device-small.png" style="-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-o-transform:rotate(90deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/firefox-os-device-small.png" style="-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg);-o-transform:rotate(270deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);"></td>
+          </tr>
+        </tbody>
+       </table>
+
+      <h3><code>origin</code></h3>
+      <p class="red">Applies only to Packaged Apps and requires Firefox OS 1.1.</p>
+      
+      <p>Packaged apps have a special internal protocol of <code>app://UUID</code> where UUID is a string unique to each device the app is installed on. UUID is not easily accessible at this time. The <code>origin</code> field allows you to replace this UUID value with a single domain name that will be used by each installed app.</p>
+      
+      <p><strong>Remember:</strong> domain name must start with <code>app://</code>, and you must be the owner of the domain name you specify.
+      
+      <pre>"origin": "app://mywebapp.com"</pre>
+      
+      <h3><code>permissions</code></h3>
+      <p class="red">Applies only to Packaged Apps.</p>
+      
+      <p>The user permissions for sensitive device APIs that your app needs, for example, access to the user’s Contacts. <a href="https://developer.mozilla.org/en-US/Apps/Build/App_permissions">See a full list of  WebAPI permissions/features</a>.</p>
+
+      <p>Each permission requires:</p>
+      
+      <ul>
+        <li><code>name</code>: the name of the permission</li>
+        <li><code>description</code>: the reason why your app needs to use this permission</li>
+        <li><code>access</code>: the level of access required (some permissions don’t need this)</li>
+      </ul>
+      
+      <p>For example, here’s an app that needs permission to use the device’s <code>contacts</code> and <code>alarms</code>.</p>
+
+<pre>"permissions": {
+  "contacts": {
+    "description": "Required for autocompletion in the share screen",
+    "access": "readcreate"
+    },
+  "alarms": {
+    "description": "Required to schedule notifications"
+  }
+}</pre>
+
+      <h3><code>precompile</code></h3>
+      <p class="red">Applies only to Packaged Apps and requires Firefox OS 1.4.</p>
+      
+      <p>The path to JavaScript files containing asm.js code that you want compiled at install time.</p>
+      
+      <p>Compilation at install time makes the installation process longer, but reduces the time it takes to start up an app.</p>
+
+<pre>"precompile": [
+  "game.js",
+  "database.js"
+]</pre>
+
+      <h3><code>redirects</code></h3>
+      <p class="red">Applies only to Packaged Apps using Firefox OS.</p>
+      
+      <p>The internal URLs your app uses to handle external processes.</p>
+      
+      <p>For example, your app might use Facebook OAuth authentication to get a user’s contacts. When the authentication server is finished, it usually redirects back to a URL that you control. Because Packaged Apps are not hosted on the web, a Packaged App does not have a valid Web URL that can be redirected to. So you use the redirects field to redirect an external Web URL to an internal app URL.</p>
+      
+      <p>In the scenario above, the redirects field will look like this:</p>
+
+<pre>"redirects": [
+  {"from": "http://facebook.com/authentication/success.html",
+    "to": "/app/main_interface.html"}
+]</pre>
+
+      <h3><code>version</code></h3>
+      
+      <p>A string that represents the version of the manifest.</p>
+      
+      <p>This field is for your convenience; it’s not used by the runtime, so version can be any value. Defining version is recommended.</p>
+
+      <pre>"version": "2.1"</pre>
+
+      <h2>Updating Your App Manifest</h2>
+      
+      <p>For information on updating apps and the App Manifest, see Updating apps.</p>
+        
         </div>
 
       </div>
