@@ -1,0 +1,71 @@
+{
+  "name": "My Awesome Application",
+  "description": "You will love this application.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png",
+    "60": "/img/icon-60.png",
+    "32": "/img/icon-32.png",
+    "90": "/img/icon-90.png",
+    "120": "/img/icon-120.png",
+    "256": "/img/icon-256.png"
+  },
+  "developer": {
+    "name": "We are Developers",
+    "url": "http://wearedevelopers.com"
+  },
+  "default_locale": "en",
+  "type": "privileged",
+  "activities": {
+    "share": {
+      "filters": {
+        "type": [ "image/png", "image/gif" ]
+      },
+      "href": "imgpicker.html",
+      "disposition": "window",
+      "returnValue": true
+    }
+  },
+  "appcache_path": "/cache.manifest",
+  "chrome": { 
+    "navigation": false 
+  },
+  "csp": "default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'",
+  "fullscreen": "true",
+  "installs_allowed_from": [
+    "https://marketplace.firefox.com"
+  ],
+  "locales": {
+    "es": {
+      "name": "Mi aplicación impresionante",
+      "description": "Le encantará esta aplicación."
+    },
+    "nl": {
+      "name": "Mijn geweldige application",
+      "description": "U zult deze applicatie houden."
+    }
+  },
+  "messages": [
+    { "telephony-new-call": "/dialer/index.html#keyboard-view" }
+  ],
+  "orientation": [ "landscape" ],
+  "origin": "app://mywebapp.com",
+  "permissions": {
+    "audio-capture": {
+      "description": "Obtain MediaStream from audio input devices"
+      },
+    "device-storage:music": {
+      "description": "Read music files",
+      "access": "readonly"
+    }
+  },
+  "precompile": [
+    "game.js",
+    "database.js"
+  ],
+  "redirects": [
+    { "from": "http://facebook.com/authentication/success.html",
+      "to": "/app/main_interface.html" }
+  ],
+  "version": "2.1"
+}
