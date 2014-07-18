@@ -1,5 +1,5 @@
 ## HTML Files
-* [Updated MDN Manifest Instructions - 07/16/14][5]
+* [Updated MDN Manifest Instructions - 07/17/14][5]
 
 
 ## Validating App Manifests from Testing Participants 
