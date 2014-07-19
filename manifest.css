@@ -16,3 +16,7 @@ h3 code {
 .h3first {
 	margin-top: .5em;
 }
+
+li.instruct {
+	margin-bottom:6px;
+}

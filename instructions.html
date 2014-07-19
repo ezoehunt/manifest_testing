@@ -1,44 +1,69 @@
 <html>
 <head>
-<title>Creating an App Manifest</title>
+<title>Create an App Manifest</title>
+<link rel="stylesheet" href="manifest.css">
 </head>
 <body>
-<h1>Creating an App Manifest for the Find My Friends App</h1>
 
-<h3>App Description</h3>
-<p>Find My Friends gathers information from your phone's address book. It then sends you a notification when you are nearby any friends in your address book.</p>
+<div style="width:60%;">
+	<h1>Create an App Manifest file</h1>
 
-<h3>Tips for completing this test</h3>
-<ul>
-	<li>This test asks you to create an App Manifest file. The App Manifest contains all the information needed to publish an app on the Firefox Marketplace. It must contain the right information about the app and must be valid JSON.</li>
-	<li>If you didn't get the URL earlier, review the <a href="http://ezoehunt.github.io/manifest_testing/mdn_instructions.html" target="_blank">instructions</a> for how to create an App Manifest. If the instructions aren't clear to you, feel free to draw your own conclusions or use external tools/websites to help.</li>
-	<li><b>When you've completed the App Manifest:
-		<ol>
-			<li>Confirm that your App Manifest is valid JSON. Use any JSON validator you like.</li>
-			<li>Then email your App Manifest to <a href="mailto:ehunt@mozilla.com">ehunt@mozilla.com</a>. Thanks!</b></li>
-		</ol>
-	</li>
-</ul>
+	<p><b>SCENARIO</b>
 
-<h3>Using the <a href="http://ezoehunt.github.io/manifest_testing/mdn_instructions.html" target="_blank">instructions</a>, decide which of the following details should be included and add those to your App Manifest file.</h3>
-<ul>
-	<li>Find My Friends is an Open Web App that has all of its resources (HTML, CSS, etc) contained in a zip file, instead of having its resources on a Web server.</li>
-	<li>The app structure for Find My Friends is:
-		<ul>
-			<li>/app</li>
-			<li>/images</li>
-			<li>/index.html</li>
-		</ul>
-	</li>
-	<li>Find My Friends has one icon sized 128x128 pixels and a second icon sized 60x60 pixels.</li>
-	<li>Find My Friends must be able to access the device's contacts, identify where the user is currently located, and be able to schedule and send notifications.</li>
-	<li>Find My Friends is developed by Tiny Kiwi Studio (http://www.tiny-kiwi.com)</li>
-	<li>Find My Friends will be released in the United States and Germany. It should have both an English and a German app description.</li>
-	<li>Find My Friends should launch in fullscreen.</li>
-	<li>Find My Friends should always display in portrait orientation.</li>
-	<li>Find My Friends is a paid app. It will only be released through the Firefox Marketplace and the Google Play Store.</li>
-	<li>This is the second version of the Find My Friends app.</li>
+	<br/></a>You have just completed a new mobile app called Find My Friends. You want to publish it on the Firefox Marketplace. To do that, you need to create an App Manifest file.</p>
 	
-</ul>
+	<p>An App Manifest file contains information needed to publish an app on the Firefox Marketplace. It must contain the right information about the app and must be valid JSON.</p>
+
+	<p style="color:red;"><b>During this test, you will create the App Manifest file.</b></p>
+
+	<p></p>
+
+	<h3>TO CREATE THE APP MANIFEST FILE:</h3>
+
+	<ul>
+		<li class="instruct"><b>Create the file on your computer using any text editor you like.</b></li>
+
+		<li class="instruct"><b>You need to know <a href="#info">these details</a> about the Find My Friends app.</b></li>
+		
+		<li class="instruct"><b><a href="http://ezoehunt.github.io/manifest_testing/mdn_instructions.html" target="_blank">These instructions</a> explain the fields you can include in the App Manifest file.</b> If the instructions aren't clear to you, feel free to draw your own conclusions or use external tools/websites to help.</li>
+		
+		<li class="instruct"><b>When you've completed the App Manifest, email your App Manifest file to <a href="mailto:ehunt@mozilla.com">ehunt@mozilla.com</a>.</b></li>
+			</ol>
+		</li>
+	</ul>
+
+	<a name="info"></a><h3>DETAILS ABOUT THE FIND MY FRIENDS APP</h3>
+	<ul>
+		<li class="instruct">Find My Friends is a mobile app that gathers information from your phone's address book. It then sends you a notification when you are nearby any friends in your address book.</li>
+		
+		<li class="instruct">Find My Friends is an Open Web App that has all of its resources (HTML, CSS, etc) contained in a zip file, instead of having its resources on a Web server.</li>
+		
+		<li class="instruct">The app structure for Find My Friends is:
+			<ul>
+				<li>/app</li>
+				<li>/images</li>
+				<li>/index.html</li>
+			</ul>
+		</li>
+		
+		<li class="instruct">Find My Friends has one icon sized 128x128 pixels and a second icon sized 60x60 pixels.</li>
+		
+		<li class="instruct">Find My Friends must be able to access the device's contacts, identify where the user is currently located, and be able to schedule and send notifications.</li>
+		
+		<li class="instruct">Find My Friends is developed by Tiny Kiwi Studio (http://www.tiny-kiwi.com)</li>
+		
+		<li class="instruct">Find My Friends will be released in the United States and Germany. It should have both an English and a German app description.</li>
+		
+		<li class="instruct">Find My Friends should launch in fullscreen.</li>
+		
+		<li class="instruct">Find My Friends should always display in portrait orientation.</li>
+		
+		<li class="instruct">Find My Friends is a paid app. It will only be released through the Firefox Marketplace and the Google Play Store.</li>
+		
+		<li class="instruct">This is the second version of the Find My Friends app.</li>
+		
+	</ul>
+</div>
+
 </body>
 </html>
