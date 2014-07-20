@@ -53,6 +53,6 @@ Save the Validation Report with the participant's App Manifest file. Use same na
 
 [3]: https://developer.mozilla.org/en-US/Apps/Build/Manifest
 
-[4]: http://ezoehunt.github.io/manifest_testing/instructions.html
+[4]: http://ezoehunt.github.io/manifest_testing/instructions_071314.html
 
 [5]: http://ezoehunt.github.io/manifest_testing/mdn_instructions.html
