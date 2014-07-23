@@ -1,3 +1,14 @@
 {
-  "manifest": "replacd this file with the participant's manifest.webapp"
+  {
+  "name": "My Awesome Application",
+  "description": "You will love this application.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png",
+    "60": "/img/icon-60.png",
+  },
+  "developer": {
+    "name": "We are Developers",
+    "url": "http://wearedevelopers.com"
+  },
 }
