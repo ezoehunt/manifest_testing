@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Marketplace Config File Instructions - Test 1</title>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="manifest.css">
+</head>
+
+	<body>
+
+    <div class="container" style="max-width:650px;margin-top:30px;margin-bottom:30px;">
+      <div class="header">
+        <h1 class="text-muted">Marketplace Config File Instructions</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-10">
+          <h2>What is a Marketplace Config File?</h2>
+          <p>he Marketplace Config file provides information about an app (such as support info, price and availability) in a simple document usable by both users and the Firefox Marketplace. This allows users to make informed decisions about apps before installing them.</p>
+
+          <p>If you are planning to publish your app on the Firefox Marketplace, you also need to have an App Manifest file.</p>
+
+          <h2>Creating the Marketplace Config File</h2>
+          
+          <h3 class="h3first">Conventions: File Name, Location, and Format</h3>
+          
+          <ul>
+            <li>Name: <code>marketplace.config</code> (must use the <code>.config</code> extension)</li>
+            <li>Location: your app's root directory</li>
+            <li>Format: JSON (must be valid JSON)</li>
+          </ul>
+
+          <h3>Path Handling</h3>
+          
+          <p>Internal paths must be absolute from the app's origin, for example, <code>/images/myicon.png</code>.</p>
+
+          <p>Internal paths also must be served from the same origin as the app.</p>
+
+          <p>External paths must be fully qualified. For example, if you have a Packaged App but host icons on your own server, the icons path would be <code>http://mywebapp/images/myicon.png</code>.</p>
+
+          <h3>Requirements for Submitting to the Firefox Marketplace</h3>
+
+          <p>If you want to publish your app to the Firefox Marketplace, your Marketplace Config must contain the required fields below. </p>
+          <ul>
+            <li><code>support</code></li>
+            <li><code>privacy_policy</code></li>
+            <li><code>categories</code></li>
+            <li><code>ratings</code></li>
+            <li><code>flash_required</code></li>
+            <li><code>screen_size</code></li>
+            <li><code>screenshots</code></li>
+            <li><code>countries</code></li>
+            <li><code>price</code></li>
+            <li><code>in_app_products</code> (if user can make in-app purchases)</li>
+            <li><code>payment_provider</code> (if users purchase the app or make in-app purchases)</li>
+            <li><code>paid_upgrade_of</code> (if app is a paid upgrade of another app)</li>
+          </ul>
+          
+          <h3>Marketplace Config File Validation</h3>
+          
+          <p>If you’re submitting to the Firefox Marketplace, your Marketplace Config file must pass Marketplace Validation.</p>
+
+          <p>Try our Marketplace Config Validator (link coming soon), which will help you identify any errors. Or you can use this API (coming soon) to validate your Marketplace Config file.</p>
+
+          <h2>Required Marketplace Config Fields</h2>
+
+          <h3 class="h3first"><code>support</code></h3>
+          <ul>
+            <li><code>email</code>: The support email address <span class="red">Required.</span></li>
+            <li><code>url</code>: The URL of a support website or support forum. Optional.</li>
+          </ul>
+
+<pre>"support": {
+   "email": "support@mywebapp.com",
+   "url": "http://www.mywebapp.com/support"
+}</pre>
+          
+          <h3><code>privacy_policy</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <p>A human-readable document describing your app’s privacy policy. The privacy policy should explain:</p>
+          
+          <ul>
+            <li>How the app gathers personal information about its users.</li>
+            <li>What the app does with that information once it has it.</li>
+            <li>What happens when this policy changes.</li>
+          </ul>
+          
+          <p>The maximum length of a privacy policy is 5000 characters. You can substitute the text for a URL that links to the privacy policy.</p>
+
+<pre>"privacy_policy":
+   "We will never sell your data. For more, read https://mywebapp.com/privacy/"
+}</pre>
+
+          <p><strong>Privacy Policy Resources:</strong></p>
+          
+          <ul>
+            <li><a href="http://www.docracy.com/mobileprivacy/">Docracy: Mobile Privacy Policy</a></li>
+            <li><a href="http://www.truste.com/free-mobile-privacy-policy/">TRUSTe: Free Privacy Policy for Mobile Apps</a></li>
+            <li><a href="http://www.iubenda.com/mobile">Iubenda: Privacy Policy Generator for Mobile Apps</a> (requires a paid account)</li>
+          </ul>
+          
+          <h3><code>categories</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <p>Up to 2 categories in which your app should be listed on the Firefox Marketplace. <a href="categories_mdn_instructions.html">See a list of categories</a>.</p>
+          
+          <pre>"categories": [ "productivity", "social" ]</pre>
+          
+          <h3><code>rating</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <ul>
+            <li><code>submission_id</code>: Submission ID value from ratings certificate</li>
+            <li><code>security_code</code>: Security code value from ratings certificate</li>
+          </ul>
+          
+          <p>To obtain a ratings certificate, <a href="https://www.globalratings.com/IARCPRODRating/Home.aspx">go to IARC</a>.</p>
+
+<pre>"ratings": {
+  "submission_id": "14",
+  "security_code": "J59TS1P"
+}</pre>
+
+          <h3><code>flash_required</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <p>Does your app require Flash? <code>true</code> or <code>false</code>.</p>
+          
+          <pre>"flash_required": "false"</pre>
+          
+          <!--h3><code>permissions</code></h3>
+          
+          <p>Do we need permissions in this file? They’re already defined in the App Manifest file.</p-->
+          
+          <h3><code>screen_size</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <p>The screen size(s) your app works on. You must define at least one screen_size from the following values:</p>
+          
+          <ul>
+            <li><code>mobile</code></li>
+            <li><code>tablet</code></li>
+            <li><code>desktop</code></li>
+          </ul>
+          
+          <pre>"screen_size": [ "mobile", "tablet", "desktop" ]</pre>
+          
+          <h3><code>screenshots</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <p>The screenshots (and/or videos) displayed in the App Details page for end-users. These also appear in search results pages.</p>
+          
+          <div class="alert alert-warning">You must define 3 screenshots, each with dimensions of 1920x1080 pixels. Files will appear in the order in which they’re specified in your App Manifest.</div>
+          
+          <p>File formats:</p>
+          
+          <ul>
+            <li>Images: JPG, PNG, or GIF</li>
+            <li>Videos: WebM</li>
+          </ul>
+          
+<pre>"screenshots": [
+  "/images/splash_page.png",
+  "/images/settings-page.jpg",
+  "/images/promo.webm"
+]</pre>
+
+          <h3><code>countries</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <p>The countries in which the app is available to download via the Firefox Marketplace. Choose one of these values:</p>
+          
+          <ul>
+            <li><code>global</code>: Your app is distributed everywhere in the world.</li>
+            <li><code>xx</code>: The 2-letter country code for each specific country where your app is distributed. Choose the country codes from the <a href="countries_mdn_instructions.html">list of countries currently supported by the Firefox Marketplace</a>.</li>
+          </ul>
+          
+          <pre>"countries": [ "co", "de", "hu", "mx", "pl" ]</pre>
+          
+          <div class="alert alert-info"><strong>Tip:</strong> The list of countries that Firefox Marketplace supports is constantly growing. When a change to the list happens, we send a message to all developers. Sign up for a Firefox Marketplace Devhub account to make sure you receive these messages.</div>
+          
+          <h3><code>price</code></h3>
+          
+          <p class="red">Required.</p>
+          
+          <p>The price tier for your app. Choose one of these values:</p>
+          
+          <ul>
+            <li><code>free</code>: Your app is free to download.</li>
+            <li><code>tier_#</code>: Your app costs money to download. <a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/App_pricing#Price_point_table">Choose the price point tier you want from this table</a>.</li>
+          </ul>
+          
+          <pre>"price": "tier 40"</pre>
+          
+          
+          <h3><code>in_app_products</code></h3>
+          
+          <p class="red">Required if users can purchase products within your app.</p>
+          
+          <p>For each product a user can purchase in your app, define these values:</p>
+          
+          <ul>
+            <li><code>name</code>: The name of the in-app product</li>
+            <li><code>price</code>: The price of the product expressed as a <a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/App_pricing#Price_point_table">price point tier number</a></li>
+          </ul>
+          
+<pre>"in_app_products": {
+  "50 coins": "tier_10",
+  "100 coins": "tier_40",
+  "power up": "tier_80"
+}</pre>
+          
+          <h3><code>payment_provider</code></h3>
+          
+          <p class="red">Required if price is not free.</p>
+          
+          <p>Information about the payment provider(s) used by your app. Currently the Firefox Marketplace supports <a href="http://www.bango.com/">Bango</a> as a payment provider (more coming soon).</p>
+          
+          <p>To complete this field, you need a <code>token</code> for each <code>payment_provider</code>. The <code>token</code> is the unique ID for your <code>payment_provider</code> given to you by the Firefox Marketplace Developer Hub.</p>
+          
+<pre>"payment_provider": {
+  "bango": {
+    "token": "2Lw6I1Rwz1twtZP7fdjF83ujiCOfRZL2AoMiOTM2xhAhdiC2am"
+  }
+}</pre>
+          
+          <div class="alert alert-info"><strong>Tip:</strong> When you make your app available globally, be sure to register for all available payment providers.</div>
+          
+          <div class="alert alert-warning"><strong>Caution:</strong> If <code>payment_provider</code> is not defined for an app with price of <code>tier_#</code>, it will fail validation.</div>
+          
+          
+          <h3><code>paid_upgrade_of</code></h3>
+          
+          <p class="red">Required if this app is a paid upgrade of another app.</p>
+          
+          <p>The name of the free app that this paid app upgrades.</p>
+          
+          <pre>"paid_upgrade_of": "Back to Candyland Free"</pre>
+          
+          <div class="alert alert-warning"><strong>Caution:</strong> The <code>developer name”</code> and <code>developer url</code> fields of <em>both</em> your paid and free apps must contain the same values. If the these values don’t match, your app will fail validation.</div>
+          
+          <h2>Optional Marketplace Config Fields</h2>
+
+          <h3 class="h3first"><code>homepage</code></h3>
+          
+          <p>The URL for the app’s homepage. Optional.</p>
+          
+          <pre>"homepage": "http://www.mywebapp.com"</pre>
+          
+          <!--h2>Updating Your App Manifest</h2>
+          
+          <p>For information on updating apps and the App Manifest, see Updating apps.</p-->
+        
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
