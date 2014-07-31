@@ -1,0 +1,61 @@
+{
+  "name": "",
+  "description": "",
+  "launch_path": "",
+  "icons": {
+    "128": "",
+    "60": "",
+    "32": "",
+    "90": "",
+    "120": "",
+    "256": ""
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "default_locale": "",
+  "type": "",
+  "activities": {
+    "": {
+    }
+  },
+  "appcache_path": "",
+  "chrome": { 
+    "navigation": true 
+  },
+  "csp": "",
+  "fullscreen": "",
+  "installs_allowed_from": [
+    ""
+  ],
+  "locales": {
+    "": {
+      "name": "",
+      "description": ""
+    },
+  },
+  "messages": [
+    { "": "" }
+  ],
+  "orientation": [ "" ],
+  "origin": "",
+  "permissions": {
+    "": {
+      "description": "",
+      "access": ""
+      },
+    "": {
+      "description": "",
+      "access": ""
+    }
+  },
+  "precompile": [
+    ""
+  ],
+  "redirects": [
+    { "from": "",
+      "to": "" }
+  ],
+  "version": ""
+}
